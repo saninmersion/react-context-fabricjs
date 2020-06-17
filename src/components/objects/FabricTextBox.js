@@ -41,7 +41,7 @@ const FabricTextBox = (props) => {
             }
             setOptions({ ...options, ...activeOptions })
         }
-    }, [activeObject, options])
+    }, [activeObject])
 
     const addTextBox = () => {
         const textBox = new fabric.Textbox("Add your text here", options)
