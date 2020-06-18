@@ -49,7 +49,7 @@ const FabricLine = () => {
             }
             setOptions({ ...options, ...activeOptions })
         }
-    }, [activeObject])
+    }, [activeObject    ])
 
     return (
         <>
