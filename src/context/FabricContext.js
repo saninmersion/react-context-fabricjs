@@ -12,12 +12,13 @@ export const FabricContextProvider = ({ children }) => {
     const [canvas, setCanvas] = useState(null)
     const [activeObject, setActiveObject] = useState(null)
 
-    const initCanvas = useCallback((el) => {
+    const initCanvas = useCallback((el, options = {}) => {
         const canvasOptions = {
             preserveObjectStacking: true,
             selection: true,
             defaultCursor: "default",
             backgroundColor: "#f3f3f3",
+            ...options
         }
         let c = new fabric.Canvas(el, canvasOptions)
         initAligningGuidelines(c)
